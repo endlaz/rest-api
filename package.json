@@ -1,0 +1,20 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "This assignment is made up of two sections. The sections can be completed in _any_ order. If you get stuck on one section, take a break and try another. Complete as many steps from each section as you can. _Note: Codaisseur uses the results of this homework assignment for a formal evaluation. You must write all of the code yourself. No collaboration or external help is allowed. **Plagiarism is a violation of the Academy contract and is not in your best interest. Do not discuss the contents of the assignment with your fellow students.**_ ## How to submit your work 1. Push your code to a GitHub repository. 1. **Send a link to the repository to teachers@codaisseur.com before Saturday 22:00** ## Setup 1. Create a new local directory for this assignment. 1. `cd` into that directory and create a new git repository. **All files for this homework must be tracked in this repository**. 1. Initialize a Node.JS project in the repository directory so you can install and use packages. ## Sections ### 1. Create an Express app with a single end-point.  1. Create a new JS file named `messages-api.js`. 1. Create an Express app in that file. The app should listen for requests on port `3000`. Make sure you add the required dependency. 1. Add a single endpoint to the app responds to `POST` requests to the `/messages` URI. 1. When a request is sent to the endpoint, it should log the `text` property of the body to the console, and it should respond with a JSON object:    ```javascript    {       \"message\": \"Message received loud and clear\"    }    ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/endlaz/rest-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/endlaz/rest-api/issues"
+  },
+  "homepage": "https://github.com/endlaz/rest-api#readme"
+}
