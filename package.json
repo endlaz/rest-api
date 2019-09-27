@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/endlaz/rest-api/issues"
   },
-  "homepage": "https://github.com/endlaz/rest-api#readme"
+  "homepage": "https://github.com/endlaz/rest-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
