@@ -6,7 +6,6 @@ const reqLimit = 5;
 let reqRemaining = reqLimit;
 
 const reqMiddleware = (req, res, next) => {
-    console.log(reqRemaining);
     if (reqRemaining > 0) {
         reqRemaining = reqRemaining - 1;
         return next();
@@ -17,7 +16,7 @@ const reqMiddleware = (req, res, next) => {
 }
 const resetReqRemaining = () => {
     console.log('time out set')
-    setTimeout(() => { reqRemaining = reqLimit; console.log('Request limit reset') }, 60000);
+    setTimeout(() => { reqRemaining = reqLimit; }, 60000);
 }
 
 app.use(bodyParser.json(), reqMiddleware);
