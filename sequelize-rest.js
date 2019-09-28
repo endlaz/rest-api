@@ -9,6 +9,7 @@ const Movie = db.define('movies', {
     synopsis: Sequelize.TEXT
 });
 
+// Left the force: true in on purpose for test reasons, and so you can reuse your postgres db (if settings are the same) when you check multiple homework assigments
 db.sync({ force: true })
     .then(() => {
         console.log('Database connected and schema updated');
@@ -54,8 +55,14 @@ app.get('/movies', (req, res, next) => {
 });
 app.get('/movies/:id', (req, res, next) => {
     Movie.findByPk(req.params.id)
-        .then(result => res.status(200).send(result))
-        .catch(res.status(404).end())
+        .then(movie => {
+            if (movie) {
+                res.status(200).send(movie)
+            } else {
+                res.status(404).end();
+            }
+        })
+        .catch(next)
 });
 app.put('/movies/:id', (req, res, next) => {
     Movie.findByPk(req.params.id)
@@ -75,7 +82,13 @@ app.delete('/movies/:id', (req, res, next) => {
             id: req.params.id
         }
     })
-    .then(res.status(200).end())
-    .catch(next);
+        .then(result => {
+            if(result > 0 ) {
+                res.status(200).end();
+            } else {
+                res.status(404).end();
+            }
+        })
+        .catch(next);
 });
 app.listen(port, console.log(`App listening to port ${port}`));
