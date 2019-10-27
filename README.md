@@ -3,14 +3,6 @@ This assignment is made up of two sections.
 The sections can be completed in _any_ order.
 If you get stuck on one section, take a break and try another.
 Complete as many steps from each section as you can.
-_Note: Codaisseur uses the results of this homework assignment for a formal evaluation.
-You must write all of the code yourself.
-No collaboration or external help is allowed.
-**Plagiarism is a violation of the Academy contract and is not in your best interest.
-Do not discuss the contents of the assignment with your fellow students.**_
-## How to submit your work
-1. Push your code to a GitHub repository.
-1. **Send a link to the repository to teachers@codaisseur.com before Saturday 22:00**
 ## Setup
 1. Create a new local directory for this assignment.
 1. `cd` into that directory and create a new git repository.
